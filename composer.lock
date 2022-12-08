@@ -4,8 +4,77 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "348c5073d5aed1092c8b4e29e77f7333",
+    "content-hash": "bffa31cb0263ea5f9e0e08d803587ce1",
     "packages": [
+        {
+            "name": "anubixo/laravel-gettext",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/anubixo/laravel-gettext.git",
+                "reference": "7bdf5d55f3c5a748c0a26227333bc2aee34a79b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/anubixo/laravel-gettext/zipball/7bdf5d55f3c5a748c0a26227333bc2aee34a79b1",
+                "reference": "7bdf5d55f3c5a748c0a26227333bc2aee34a79b1",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^8.0 || ^9.0",
+                "laravel/helpers": "^1.5",
+                "php": ">=8.0"
+            },
+            "require-dev": {
+                "laravel/laravel": "^8.0 || ^9.0",
+                "mockery/mockery": "dev-master",
+                "php-coveralls/php-coveralls": "^2.5.3",
+                "phpunit/phpunit": "~7.0 || ^8.5 || ^9",
+                "squizlabs/php_codesniffer": "^3.7.1"
+            },
+            "default-branch": true,
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Anubixo\\LaravelGettext\\LaravelGettextServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/Anubixo/LaravelGettext/Support/helpers.php"
+                ],
+                "psr-0": {
+                    "Anubixo\\LaravelGettext\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ahmed AlMoselhy",
+                    "email": "ah.almoselhy@gmail.com"
+                }
+            ],
+            "description": "Adds localization support to laravel applications in an easy way using Poedit and GNU gettext.",
+            "homepage": "https://github.com/anubixo/laravel-gettext",
+            "keywords": [
+                "gettext",
+                "laravel",
+                "laravel-gettext",
+                "localization",
+                "poEdit",
+                "translation"
+            ],
+            "support": {
+                "issues": "https://github.com/anubixo/laravel-gettext/issues",
+                "source": "https://github.com/anubixo/laravel-gettext/tree/master"
+            },
+            "time": "2022-11-09T19:59:07+00:00"
+        },
         {
             "name": "brick/math",
             "version": "0.10.2",
@@ -899,16 +968,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v9.36.4",
+            "version": "v9.39.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "15ce569fd93124e8e2257c24e3ed85b9ef9951d6"
+                "reference": "67e674709e1e7db14f304a871481f310822d68c5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/15ce569fd93124e8e2257c24e3ed85b9ef9951d6",
-                "reference": "15ce569fd93124e8e2257c24e3ed85b9ef9951d6",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/67e674709e1e7db14f304a871481f310822d68c5",
+                "reference": "67e674709e1e7db14f304a871481f310822d68c5",
                 "shasum": ""
             },
             "require": {
@@ -1081,7 +1150,63 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2022-10-20T16:11:03+00:00"
+            "time": "2022-11-08T14:47:39+00:00"
+        },
+        {
+            "name": "laravel/helpers",
+            "version": "v1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/helpers.git",
+                "reference": "c28b0ccd799d58564c41a62395ac9511a1e72931"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/helpers/zipball/c28b0ccd799d58564c41a62395ac9511a1e72931",
+                "reference": "c28b0ccd799d58564c41a62395ac9511a1e72931",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~5.8.0|^6.0|^7.0|^8.0|^9.0",
+                "php": "^7.1.3|^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^7.0|^8.0|^9.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Dries Vints",
+                    "email": "dries@laravel.com"
+                }
+            ],
+            "description": "Provides backwards compatibility for helpers in the latest Laravel release.",
+            "keywords": [
+                "helpers",
+                "laravel"
+            ],
+            "support": {
+                "source": "https://github.com/laravel/helpers/tree/v1.5.0"
+            },
+            "time": "2022-01-12T15:58:51+00:00"
         },
         {
             "name": "laravel/sanctum",
@@ -2179,16 +2304,16 @@
         },
         {
             "name": "opcodesio/log-viewer",
-            "version": "v1.6.3",
+            "version": "v1.6.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/opcodesio/log-viewer.git",
-                "reference": "6f5031f62c41bc157e24fe32ef3fd3f58b12a99e"
+                "reference": "1440ef1c87dadd4f6515d88b6a6b4e3a72156863"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/6f5031f62c41bc157e24fe32ef3fd3f58b12a99e",
-                "reference": "6f5031f62c41bc157e24fe32ef3fd3f58b12a99e",
+                "url": "https://api.github.com/repos/opcodesio/log-viewer/zipball/1440ef1c87dadd4f6515d88b6a6b4e3a72156863",
+                "reference": "1440ef1c87dadd4f6515d88b6a6b4e3a72156863",
                 "shasum": ""
             },
             "require": {
@@ -2248,9 +2373,9 @@
             ],
             "support": {
                 "issues": "https://github.com/opcodesio/log-viewer/issues",
-                "source": "https://github.com/opcodesio/log-viewer/tree/v1.6.3"
+                "source": "https://github.com/opcodesio/log-viewer/tree/v1.6.4"
             },
-            "time": "2022-10-20T09:14:05+00:00"
+            "time": "2022-10-26T05:45:55+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -6551,16 +6676,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.5.25",
+            "version": "9.5.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "3e6f90ca7e3d02025b1d147bd8d4a89fd4ca8a1d"
+                "reference": "851867efcbb6a1b992ec515c71cdcf20d895e9d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3e6f90ca7e3d02025b1d147bd8d4a89fd4ca8a1d",
-                "reference": "3e6f90ca7e3d02025b1d147bd8d4a89fd4ca8a1d",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/851867efcbb6a1b992ec515c71cdcf20d895e9d2",
+                "reference": "851867efcbb6a1b992ec515c71cdcf20d895e9d2",
                 "shasum": ""
             },
             "require": {
@@ -6633,7 +6758,7 @@
             ],
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.25"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.5.26"
             },
             "funding": [
                 {
@@ -6649,7 +6774,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-25T03:44:45+00:00"
+            "time": "2022-10-28T06:00:21+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7823,16 +7948,16 @@
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "1.5.2",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "f2336fc79d99aab5cf27fa4aebe5e9c9ecf3808a"
+                "reference": "2b79cf6ed40946b64ac6713d7d2da8a9d87f612b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/f2336fc79d99aab5cf27fa4aebe5e9c9ecf3808a",
-                "reference": "f2336fc79d99aab5cf27fa4aebe5e9c9ecf3808a",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/2b79cf6ed40946b64ac6713d7d2da8a9d87f612b",
+                "reference": "2b79cf6ed40946b64ac6713d7d2da8a9d87f612b",
                 "shasum": ""
             },
             "require": {
@@ -7909,7 +8034,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-10-14T12:24:21+00:00"
+            "time": "2022-10-26T17:39:54+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -7964,7 +8089,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "anubixo/laravel-gettext": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
